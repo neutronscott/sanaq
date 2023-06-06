@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="author" type="text/plain" href="humans.txt" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="site.css" />
+		<script src="jquery-3.3.1.min.js"></script>
+		<script src="site.js"></script>
+		<title>scott's url thingie</title>
+	</head>
+
+	<!--[if lt IE 7 ]>   <body class="ie6">          <![endif]-->
+	<!--[if IE 7 ]>      <body class="ie7">          <![endif]-->
+	<!--[if IE 8 ]>      <body class="ie8">          <![endif]-->
+	<!--[if IE 9 ]>      <body class="ie9">          <![endif]-->
+	<!--[if (gt IE 9) ]> <body class="modern">       <![endif]-->
+	<!--[!(IE)]><!-->    <body class="notIE modern"> <!--<![endif]-->
+
+		<form id="f1" action="/" method="post" enctype="multipart/form-data">
+		<div id="mainheader">scott's url thingie</div>
+
+		<div style="position:relative">
+
+		<div class="menudialog" id="mainmenu">
+			<div class="menuouter">
+				<div class="menuheader"><span>MAIN MENU</span></div>
+				<div class="menutopborder"></div>
+				<div class="menubottomborder"></div>
+				<div class="menutoptext">Arrow keys navigate the menu. &lt;Enter&gt; selects submenus ---&gt;. Highlighted letters are hotkeys. Press &lt;Esc&gt; to exit, &lt;?&gt; for Help. Legend: [ ] isn't yet filled.</div>
+				<div class="menuoptions">
+					<div class="menutopborder"></div>
+					<div class="menubottomborder"></div>
+					<ul>
+						<li>[ ] <a class="nojs default" id="url" href="#submenu-url" title="Shorten a URL (EXPERIMENTAL)"><span class="hotkey">S</span>horten a URL (EXPERIMENTAL) ---></a></li>
+						<li>[ ] <a class="nojs" id="upload" href="#submenu-upload" title="Upload a file (EXPERIMENTAL)"><span class="hotkey">U</span>pload a file (EXPERIMENTAL) ---></a></li>
+						<li>[ ] <a class="nojs" id="paste" href="#submenu-paste" title="Pastebin text (EXPERIMENTAL)"><span class="hotkey">P</span>astebin text (EXPERIMENTAL) ---></a></li>
+						<li>[ ] <input type="submit" class="nojs" id="submit" value="Submit form (no-js)" /></li>
+					</ul>
+				</div>
+				<div class="menubottomtext"><div class="menutopborder"></div><a class="nojs default button-submit" href="#" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">S</span>ubmit&nbsp;<span class="menubrackets">&gt;</span></a> <a class="nojs" href="http://san.aq/exit.html" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">E</span>xit&nbsp;<span class="menubrackets">&gt;</span></a> <a class="nojs button-help" href="#submenu-help" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">H</span>elp&nbsp;<span class="menubrackets">&gt;</span></a></div>
+			</div>
+		</div>
+
+		<div class="menudialog submenu" id="submenu-url">
+			<div class="menuouter">
+				<div class="menuheader"><span>Shorten a URL</span></div>
+				<div class="menutopborder"></div>
+				<div class="menubottomborder"></div>
+				<div class="menutoptext">Redirect destination</div>
+				<div class="menuoptions">
+					<div class="menutopborder"></div>
+					<div class="menubottomborder"></div>
+					<input type="text" name="url" class="default" autocomplete="off" />
+				</div>
+				<div class="menubottomtext"><div class="menutopborder"></div><a class="nojs default button-submit" href="#mainmenu" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">S</span>ubmit&nbsp;<span class="menubrackets">&gt;</span></a> <a class="nojs button-exit" href="#mainmenu" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">E</span>xit&nbsp;<span class="menubrackets">&gt;</span></a> <a class="nojs button-help" href="#submenu-help" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">H</span>elp&nbsp;<span class="menubrackets">&gt;</span></a></div>
+			</div>
+		</div>
+
+		<div class="menudialog submenu" id="submenu-upload">
+			<div class="menuouter">
+				<div class="menuheader"><span>Upload a file</span></div>
+				<div class="menutopborder"></div>
+				<div class="menubottomborder"></div>
+				<div class="menutoptext">You may upload multiple files at once. Size is limited to 300kB.</div>
+				<div class="menuoptions">
+					<div class="menutopborder"></div>
+					<div class="menubottomborder"></div>
+					<input type="file" multiple="true" name="file[]" />
+				</div>
+				<div class="menubottomtext"><div class="menutopborder"></div><a class="nojs default button-submit" href="#mainmenu" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">S</span>ubmit&nbsp;<span class="menubrackets">&gt;</span></a> <a class="nojs button-exit" href="#mainmenu" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">E</span>xit&nbsp;<span class="menubrackets">&gt;</span></a> <a class="nojs button-help" href="#submenu-help" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">H</span>elp&nbsp;<span class="menubrackets">&gt;</span></a></div>
+			</div>
+		</div>
+
+		<div class="menudialog submenu" id="submenu-paste">
+			<div class="menuouter">
+				<div class="menuheader"><span>Paste text</span></div>
+				<div class="menutopborder"></div>
+				<div class="menubottomborder"></div>
+				<div class="menutoptext">pastie!</div>
+				<div class="menuoptions">
+					<div class="menutopborder"></div>
+					<div class="menubottomborder"></div>
+					<textarea name="paste" class="default" rows="25" cols="80"></textarea>
+				</div>
+				<div class="menubottomtext"><div class="menutopborder"></div><a class="nojs default button-submit" href="#mainmenu" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">S</span>ubmit&nbsp;<span class="menubrackets">&gt;</span></a> <a class="nojs button-exit" href="#mainmenu" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">E</span>xit&nbsp;<span class="menubrackets">&gt;</span></a> <a class="nojs button-help" href="#submenu-help" title=""><span class="menubrackets">&lt;</span>&nbsp;<span class="hotkey">H</span>elp&nbsp;<span class="menubrackets">&gt;</span></a></div>
+			</div>
+		</div>
+
+		<div class="menudialog submenu" id="submenu-help">
+			<div class="menuouter">
+				<div class="menuheader"><span>Help</span></div>
+				<div class="menutopborder"></div>
+				<div class="menubottomborder"></div>
+				<div class="menutoptext">Help</div>
+				<div class="menuoptions">
+					<div class="menutopborder"></div>
+					<div class="menubottomborder"></div>
+You may submit multiple items at once by using a menu's Exit button and selecting another submenu. You
+may also submit using curl, for example:<br />
+echo Hello World | curl -0 -F 'text=<-' http://san.aq<br />
+				</div>
+				<div class="menubottomtext"><div class="menutopborder"></div><a class="nojs default button-exit" href="#mainmenu" title=""><span class="menubrackets">&lt;</span>&nbsp;<span>O</span>K&nbsp;<span class="menubrackets">&gt;</span></a></div>
+			</div>
+		</div>
+		</div>
+	</form>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="author" type="text/plain" href="humans.txt" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<title>screen 0 (bash) | guest@san</title>
+<style type="text/css">
+body {
+	background-color: black;
+	color: silver;
+	font-family: "Courier New","DejaVu Sans Mono",Courier,monospace;
+	font-size: 10pt;
+}
+#cursor { background-color: lime; }
+</style>
+</head>
+<body>
+	[guest@san ~]$ <span id="precursor"></span><span id="cursor">&nbsp;</span>
+<script type="text/javascript">
+var precursor=document.getElementById('precursor');
+var cursor=document.getElementById('cursor');
+var typeText="i hate blinking cursors! don't you? ;)";
+var typeOffset=0;
+
+setInterval("cursor_blink()", 500);
+function cursor_blink() {
+	if (cursor.style.backgroundColor == 'lime')
+		cursor.style.backgroundColor = '#000';
+	else
+		cursor.style.backgroundColor = 'lime';
+}
+var typeInter=setInterval("type_text()", 150);
+function type_text() {
+	if (typeOffset >= typeText.length) {
+		clearInterval(typeInter);
+		precursor.innerHTML += ' ^C<br>[guest@san ~]$ ';
+		return;
+	}
+	precursor.innerHTML = typeText.substr(0, ++typeOffset);
+}
+</script>
+</body>
+</html>

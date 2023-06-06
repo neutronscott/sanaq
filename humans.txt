@@ -1,0 +1,20 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+	Owner: neutronscott
+	Twitter: @neutronscott
+	IRC: mute on freenode
+	From: Charleston, SC, USA
+
+	Stylist: prurigro
+	From: Canada
+
+/* THANKS */
+	IE6-8 box-shadow: http://www.useragentman.com/blog/2011/08/24/how-to-simulate-css3-box-shadow-in-ie7-8-without-javascript/
+
+/* SITE */
+	Last update: 2011/12/13
+	Language: English
+	Doctype: HTML5
+	IDE: Notepad++, nano
